@@ -20,7 +20,7 @@ namespace Arabia.Services.Tests
        [TestInitialize]
         public void Init()
         {
-               
+               // setup
            _competitions = new List<Competition>()
             {
                 new Competition(){Competition_Id = 1,Competition_Name = "WorldCup"},
