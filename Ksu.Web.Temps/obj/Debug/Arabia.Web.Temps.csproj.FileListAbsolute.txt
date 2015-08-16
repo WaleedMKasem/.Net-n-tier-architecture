@@ -61,3 +61,37 @@ D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.Deploymen
 D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.Razor.xml
 D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.dll
 D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\Arabia.Web.Temps.dll.config
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\Arabia.Web.Temps.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\Arabia.Web.Temps.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\EntityFramework.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\Microsoft.Web.Infrastructure.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\Newtonsoft.Json.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\PagedList.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\PagedList.Mvc.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Net.Http.Formatting.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Helpers.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Http.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Http.WebHost.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Mvc.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Razor.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.WebPages.Deployment.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.WebPages.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.WebPages.Razor.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\EntityFramework.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\PagedList.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\PagedList.Mvc.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\Newtonsoft.Json.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Net.Http.Formatting.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Helpers.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Http.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Http.WebHost.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Mvc.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.Razor.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.WebPages.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.WebPages.Deployment.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\bin\System.Web.WebPages.Razor.xml
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.csprojResolveAssemblyReference.cache
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.dll
+D:\GitHub\ArabiaTemplate\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.pdb

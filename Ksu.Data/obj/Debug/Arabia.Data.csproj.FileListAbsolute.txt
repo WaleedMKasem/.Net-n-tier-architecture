@@ -28,3 +28,18 @@ D:\Waleed\Arabia Template - Copy\Ksu.Data\bin\Debug\Microsoft.Practices.ServiceL
 D:\Waleed\Arabia Template - Copy\Ksu.Data\obj\Debug\Arabia.Data.csprojResolveAssemblyReference.cache
 D:\Waleed\Arabia Template - Copy\Ksu.Data\obj\Debug\Arabia.Data.dll
 D:\Waleed\Arabia Template - Copy\Ksu.Data\obj\Debug\Arabia.Data.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Arabia.Data.dll.config
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Arabia.Data.dll
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Arabia.Data.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Arabia.Core.dll
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\EntityFramework.dll
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Arabia.Core.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\EntityFramework.xml
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Data\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\GitHub\ArabiaTemplate\Ksu.Data\obj\Debug\Arabia.Data.csprojResolveAssemblyReference.cache
+D:\GitHub\ArabiaTemplate\Ksu.Data\obj\Debug\Arabia.Data.dll
+D:\GitHub\ArabiaTemplate\Ksu.Data\obj\Debug\Arabia.Data.pdb

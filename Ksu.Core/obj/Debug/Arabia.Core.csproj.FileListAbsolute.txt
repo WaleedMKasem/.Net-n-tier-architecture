@@ -41,3 +41,24 @@ D:\Waleed\Arabia Template - Copy\Ksu.Core\bin\Debug\System.Web.WebPages.Deployme
 D:\Waleed\Arabia Template - Copy\Ksu.Core\bin\Debug\System.Web.WebPages.Razor.xml
 D:\Waleed\Arabia Template - Copy\Ksu.Core\obj\Debug\Arabia.Core.dll
 D:\Waleed\Arabia Template - Copy\Ksu.Core\obj\Debug\Arabia.Core.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\Arabia.Core.dll.config
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\Arabia.Core.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\Arabia.Core.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.Helpers.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.Mvc.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.Razor.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.WebPages.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.WebPages.Razor.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.Helpers.xml
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.Mvc.xml
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.Razor.xml
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.WebPages.xml
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\GitHub\ArabiaTemplate\Ksu.Core\bin\Debug\System.Web.WebPages.Razor.xml
+D:\GitHub\ArabiaTemplate\Ksu.Core\obj\Debug\Arabia.Core.dll
+D:\GitHub\ArabiaTemplate\Ksu.Core\obj\Debug\Arabia.Core.pdb
