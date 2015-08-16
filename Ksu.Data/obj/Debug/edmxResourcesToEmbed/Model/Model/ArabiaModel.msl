@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SportsModelStoreContainer" CdmEntityContainer="SportsEntities">
+    <EntitySetMapping Name="Competitions">
+      <EntityTypeMapping TypeName="SportsModel.Competition">
+        <MappingFragment StoreEntitySet="Competition">
+          <ScalarProperty Name="Competition_Id" ColumnName="Competition_Id" />
+          <ScalarProperty Name="Competition_Name" ColumnName="Competition_Name" />
+          <ScalarProperty Name="Competition_Type" ColumnName="Competition_Type" />
+          <ScalarProperty Name="Competition_Format" ColumnName="Competition_Format" />
+          <ScalarProperty Name="area_id" ColumnName="area_id" />
+          <ScalarProperty Name="Competition_Team_Type" ColumnName="Competition_Team_Type" />
+          <ScalarProperty Name="Competition_soccer_Type" ColumnName="Competition_soccer_Type" />
+          <ScalarProperty Name="Last_updated" ColumnName="Last_updated" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Competition_Authorized" ColumnName="Competition_Authorized" />
+          <ScalarProperty Name="Competition_Active" ColumnName="Competition_Active" />
+          <ScalarProperty Name="Competition_InsDate" ColumnName="Competition_InsDate" />
+          <ScalarProperty Name="Competition_LastUpdate" ColumnName="Competition_LastUpdate" />
+          <ScalarProperty Name="Competition_Order" ColumnName="Competition_Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

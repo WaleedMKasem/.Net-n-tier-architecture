@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MoheetModelStoreContainer" CdmEntityContainer="Moheet_BackOfficeEntities">
+    <EntitySetMapping Name="CMS_Document">
+      <EntityTypeMapping TypeName="MoheetModel.CMS_Document">
+        <MappingFragment StoreEntitySet="CMS_Document">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="DocumentTitle" ColumnName="DocumentTitle" />
+          <ScalarProperty Name="DocumentSubTitle" ColumnName="DocumentSubTitle" />
+          <ScalarProperty Name="DocumentSummary" ColumnName="DocumentSummary" />
+          <ScalarProperty Name="DocumentBody" ColumnName="DocumentBody" />
+          <ScalarProperty Name="DocumentBodyText" ColumnName="DocumentBodyText" />
+          <ScalarProperty Name="DocumentKeywords" ColumnName="DocumentKeywords" />
+          <ScalarProperty Name="DocumentDescription" ColumnName="DocumentDescription" />
+          <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+          <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+          <ScalarProperty Name="ImageComment" ColumnName="ImageComment" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="RatingValue" ColumnName="RatingValue" />
+          <ScalarProperty Name="RatingCount" ColumnName="RatingCount" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="PrintCount" ColumnName="PrintCount" />
+          <ScalarProperty Name="SaveCount" ColumnName="SaveCount" />
+          <ScalarProperty Name="SendCount" ColumnName="SendCount" />
+          <ScalarProperty Name="CommentsAllowed" ColumnName="CommentsAllowed" />
+          <ScalarProperty Name="ShowInTicker" ColumnName="ShowInTicker" />
+          <ScalarProperty Name="DocumentGUID" ColumnName="DocumentGUID" />
+          <ScalarProperty Name="TempDocumentBody" ColumnName="TempDocumentBody" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="AuthorImageID" ColumnName="AuthorImageID" />
+          <ScalarProperty Name="EditorID" ColumnName="EditorID" />
+          <ScalarProperty Name="DocumentLocations" ColumnName="DocumentLocations" />
+          <ScalarProperty Name="DocumentCountries" ColumnName="DocumentCountries" />
+          <ScalarProperty Name="DocumentSubjects" ColumnName="DocumentSubjects" />
+          <ScalarProperty Name="DocumentNews" ColumnName="DocumentNews" />
+          <ScalarProperty Name="DocumentImages" ColumnName="DocumentImages" />
+          <ScalarProperty Name="DocumentCompetetions" ColumnName="DocumentCompetetions" />
+          <ScalarProperty Name="DocumentTeams" ColumnName="DocumentTeams" />
+          <ScalarProperty Name="DocumentPlayers" ColumnName="DocumentPlayers" />
+          <ScalarProperty Name="DocumentMatches" ColumnName="DocumentMatches" />
+          <ScalarProperty Name="DocumentVideos" ColumnName="DocumentVideos" />
+          <ScalarProperty Name="SiteIDs" ColumnName="SiteIDs" />
+          <ScalarProperty Name="isInfographic" ColumnName="isInfographic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

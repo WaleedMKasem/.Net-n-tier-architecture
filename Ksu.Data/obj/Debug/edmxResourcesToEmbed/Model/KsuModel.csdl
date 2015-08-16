@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArabiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ArabiaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ContractHistories" EntityType="ArabiaModel.ContractHistory" />
+    <EntitySet Name="ContractProgresses" EntityType="ArabiaModel.ContractProgress" />
+    <EntitySet Name="Contracts" EntityType="ArabiaModel.Contract" />
+    <EntitySet Name="Governorates" EntityType="ArabiaModel.Governorate" />
+    <EntitySet Name="Nationalities" EntityType="ArabiaModel.Nationality" />
+    <EntitySet Name="ProjectAnnualApprovals" EntityType="ArabiaModel.ProjectAnnualApproval" />
+    <EntitySet Name="Projects" EntityType="ArabiaModel.Project" />
+    <EntitySet Name="ProjectTotalSpendings" EntityType="ArabiaModel.ProjectTotalSpending" />
+    <EntitySet Name="StumbleAttachments" EntityType="ArabiaModel.StumbleAttachment" />
+    <EntitySet Name="Stumbles" EntityType="ArabiaModel.Stumble" />
+    <EntitySet Name="Users" EntityType="ArabiaModel.User" />
+    <AssociationSet Name="FK_ContractHistory_Contracts" Association="ArabiaModel.FK_ContractHistory_Contracts">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="ContractHistory" EntitySet="ContractHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractHistory_Nationalities" Association="ArabiaModel.FK_ContractHistory_Nationalities">
+      <End Role="Nationality" EntitySet="Nationalities" />
+      <End Role="ContractHistory" EntitySet="ContractHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractHistory_Users" Association="ArabiaModel.FK_ContractHistory_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ContractHistory" EntitySet="ContractHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProgress_Contracts" Association="ArabiaModel.FK_ContractProgress_Contracts">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="ContractProgress" EntitySet="ContractProgresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProgress_Users" Association="ArabiaModel.FK_ContractProgress_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ContractProgress" EntitySet="ContractProgresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contracts_Projects" Association="ArabiaModel.FK_Contracts_Projects">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_Governorates" Association="ArabiaModel.FK_Projects_Governorates">
+      <End Role="Governorate" EntitySet="Governorates" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAnnualApproval_Projects" Association="ArabiaModel.FK_ProjectAnnualApproval_Projects">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="ProjectAnnualApproval" EntitySet="ProjectAnnualApprovals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTotalSpendings_Projects" Association="ArabiaModel.FK_ProjectTotalSpendings_Projects">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="ProjectTotalSpending" EntitySet="ProjectTotalSpendings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StumbleAttachments_Stumbles" Association="ArabiaModel.FK_StumbleAttachments_Stumbles">
+      <End Role="Stumble" EntitySet="Stumbles" />
+      <End Role="StumbleAttachment" EntitySet="StumbleAttachments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ContractHistory">
+    <Key>
+      <PropertyRef Name="ContractHistoryId" />
+    </Key>
+    <Property Name="ContractHistoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" Nullable="false" />
+    <Property Name="ContractorName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ContractorNationalityId" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="ExecutionPeriod" Type="Int16" Nullable="false" />
+    <Property Name="SettlementDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SigningDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SiteDeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ActualStartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ProposedEndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OfficerId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Contract" Relationship="ArabiaModel.FK_ContractHistory_Contracts" FromRole="ContractHistory" ToRole="Contract" />
+    <NavigationProperty Name="Nationality" Relationship="ArabiaModel.FK_ContractHistory_Nationalities" FromRole="ContractHistory" ToRole="Nationality" />
+    <NavigationProperty Name="User" Relationship="ArabiaModel.FK_ContractHistory_Users" FromRole="ContractHistory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="ContractProgress">
+    <Key>
+      <PropertyRef Name="ProgressId" />
+    </Key>
+    <Property Name="ProgressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" Nullable="false" />
+    <Property Name="ActualProgressPerc" Type="Byte" Nullable="false" />
+    <Property Name="EvaluationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Contract" Relationship="ArabiaModel.FK_ContractProgress_Contracts" FromRole="ContractProgress" ToRole="Contract" />
+    <NavigationProperty Name="User" Relationship="ArabiaModel.FK_ContractProgress_Users" FromRole="ContractProgress" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ContractId" />
+    </Key>
+    <Property Name="ContractId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="ContractNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContractHistories" Relationship="ArabiaModel.FK_ContractHistory_Contracts" FromRole="Contract" ToRole="ContractHistory" />
+    <NavigationProperty Name="ContractProgresses" Relationship="ArabiaModel.FK_ContractProgress_Contracts" FromRole="Contract" ToRole="ContractProgress" />
+    <NavigationProperty Name="Project" Relationship="ArabiaModel.FK_Contracts_Projects" FromRole="Contract" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Governorate">
+    <Key>
+      <PropertyRef Name="GovernorateId" />
+    </Key>
+    <Property Name="GovernorateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Projects" Relationship="ArabiaModel.FK_Projects_Governorates" FromRole="Governorate" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Nationality">
+    <Key>
+      <PropertyRef Name="NationalityId" />
+    </Key>
+    <Property Name="NationalityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContractHistories" Relationship="ArabiaModel.FK_ContractHistory_Nationalities" FromRole="Nationality" ToRole="ContractHistory" />
+  </EntityType>
+  <EntityType Name="ProjectAnnualApproval">
+    <Key>
+      <PropertyRef Name="ProjectAnnualApprovalId" />
+    </Key>
+    <Property Name="ProjectAnnualApprovalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="Year" Type="Int16" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Project" Relationship="ArabiaModel.FK_ProjectAnnualApproval_Projects" FromRole="ProjectAnnualApproval" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Byte" Nullable="false" />
+    <Property Name="ExpectedStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ProposedStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ActualEndDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprovalDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TotalCost" Type="Double" Nullable="false" />
+    <Property Name="Region" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="GovernorateId" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Contracts" Relationship="ArabiaModel.FK_Contracts_Projects" FromRole="Project" ToRole="Contract" />
+    <NavigationProperty Name="Governorate" Relationship="ArabiaModel.FK_Projects_Governorates" FromRole="Project" ToRole="Governorate" />
+    <NavigationProperty Name="ProjectAnnualApprovals" Relationship="ArabiaModel.FK_ProjectAnnualApproval_Projects" FromRole="Project" ToRole="ProjectAnnualApproval" />
+    <NavigationProperty Name="ProjectTotalSpendings" Relationship="ArabiaModel.FK_ProjectTotalSpendings_Projects" FromRole="Project" ToRole="ProjectTotalSpending" />
+  </EntityType>
+  <EntityType Name="ProjectTotalSpending">
+    <Key>
+      <PropertyRef Name="ProjectTotalSpendingsId" />
+    </Key>
+    <Property Name="ProjectTotalSpendingsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="TotalSpending" Type="Double" Nullable="false" />
+    <Property Name="SpendingDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Project" Relationship="ArabiaModel.FK_ProjectTotalSpendings_Projects" FromRole="ProjectTotalSpending" ToRole="Project" />
+  </EntityType>
+  <EntityType Name="StumbleAttachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StumbleId" Type="Int32" Nullable="false" />
+    <Property Name="Attachment" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Stumble" Relationship="ArabiaModel.FK_StumbleAttachments_Stumbles" FromRole="StumbleAttachment" ToRole="Stumble" />
+  </EntityType>
+  <EntityType Name="Stumble">
+    <Key>
+      <PropertyRef Name="StumbleId" />
+    </Key>
+    <Property Name="StumbleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ObjId" Type="Int32" Nullable="false" />
+    <Property Name="IsProject" Type="Boolean" Nullable="false" />
+    <Property Name="StumbleReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="StumbleAttachments" Relationship="ArabiaModel.FK_StumbleAttachments_Stumbles" FromRole="Stumble" ToRole="StumbleAttachment" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="RoleId" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="ContractHistories" Relationship="ArabiaModel.FK_ContractHistory_Users" FromRole="User" ToRole="ContractHistory" />
+    <NavigationProperty Name="ContractProgresses" Relationship="ArabiaModel.FK_ContractProgress_Users" FromRole="User" ToRole="ContractProgress" />
+  </EntityType>
+  <Association Name="FK_ContractHistory_Contracts">
+    <End Type="ArabiaModel.Contract" Role="Contract" Multiplicity="1" />
+    <End Type="ArabiaModel.ContractHistory" Role="ContractHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="ContractHistory">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractHistory_Nationalities">
+    <End Type="ArabiaModel.Nationality" Role="Nationality" Multiplicity="1" />
+    <End Type="ArabiaModel.ContractHistory" Role="ContractHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nationality">
+        <PropertyRef Name="NationalityId" />
+      </Principal>
+      <Dependent Role="ContractHistory">
+        <PropertyRef Name="ContractorNationalityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractHistory_Users">
+    <End Type="ArabiaModel.User" Role="User" Multiplicity="1" />
+    <End Type="ArabiaModel.ContractHistory" Role="ContractHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ContractHistory">
+        <PropertyRef Name="OfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProgress_Contracts">
+    <End Type="ArabiaModel.Contract" Role="Contract" Multiplicity="1" />
+    <End Type="ArabiaModel.ContractProgress" Role="ContractProgress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="ContractProgress">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProgress_Users">
+    <End Type="ArabiaModel.User" Role="User" Multiplicity="1" />
+    <End Type="ArabiaModel.ContractProgress" Role="ContractProgress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ContractProgress">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contracts_Projects">
+    <End Type="ArabiaModel.Project" Role="Project" Multiplicity="1" />
+    <End Type="ArabiaModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_Governorates">
+    <End Type="ArabiaModel.Governorate" Role="Governorate" Multiplicity="0..1" />
+    <End Type="ArabiaModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Governorate">
+        <PropertyRef Name="GovernorateId" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="GovernorateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAnnualApproval_Projects">
+    <End Type="ArabiaModel.Project" Role="Project" Multiplicity="1" />
+    <End Type="ArabiaModel.ProjectAnnualApproval" Role="ProjectAnnualApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="ProjectAnnualApproval">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTotalSpendings_Projects">
+    <End Type="ArabiaModel.Project" Role="Project" Multiplicity="1" />
+    <End Type="ArabiaModel.ProjectTotalSpending" Role="ProjectTotalSpending" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="ProjectTotalSpending">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StumbleAttachments_Stumbles">
+    <End Type="ArabiaModel.Stumble" Role="Stumble" Multiplicity="1" />
+    <End Type="ArabiaModel.StumbleAttachment" Role="StumbleAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stumble">
+        <PropertyRef Name="StumbleId" />
+      </Principal>
+      <Dependent Role="StumbleAttachment">
+        <PropertyRef Name="StumbleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

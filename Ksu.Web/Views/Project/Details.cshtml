@@ -1,0 +1,120 @@
+﻿@using Arabia.Web.Common;
+@model Arabia.Core.Projects.FullProject
+
+@{
+    ViewBag.Title = "التفاصيل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>التفاصيل</h2>
+
+<fieldset>
+    <legend>المشروعات المعتمدة بميزانية الجامعة</legend>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ProjectNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProjectNo)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.status)
+    </div>
+    <div class="display-field">
+        @ViewBag.ProjectStatus[Model.status]
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ExpectedStartDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.ExpectedStartDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ProposedStartDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.ProposedStartDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ActualEndDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.ActualEndDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ApprovalDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.ApprovalDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.TotalCost)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TotalCost)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.LastSpendingDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.LastSpendingDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.LastTotalSpending)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastTotalSpending)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.FirstApprovalYear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstApprovalYear)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.FirstApprovalAmount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstApprovalAmount)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Region)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Region)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Governorate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Governorate)
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("المصروفات", "Index", "ProjectTotalSpendings", new { ProjectId = Model.ProjectId, ProjectName = Model.Name, ProjectNo = Model.ProjectNo }, new { }) |
+    @Html.ActionLink("الإعتمادات السنوية", "Index", "ProjectAnnualApproval", new { ProjectId = Model.ProjectId, ProjectName = Model.Name, ProjectNo = Model.ProjectNo }, new { }) |
+    @Html.ActionLink("أسباب التعثر", "Index", "Stumbles", new { id = Model.ProjectId, Name = Model.Name ,No=Model.ProjectNo, IsProject = 1 }, new { }) |
+    @Html.ActionLink("العقود", "Index", "Contract", new { ProjectId = Model.ProjectId, ProjectName = Model.Name, ProjectNo = Model.ProjectNo }, new { }) |
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.ProjectId }) |
+   @Html.ActionLink("قائمة المشروعات", "Index", null, new { @class = "back" })
+</p>

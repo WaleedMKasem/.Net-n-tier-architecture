@@ -1,0 +1,218 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using Arabia.Web.Common;
+@model IPagedList<Arabia.Core.Contracts.FullContract>
+
+@{
+    ViewBag.Title = "العقود التابعة للمشروع";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="list-page">
+
+    <fieldset>
+        <legend><h2>العقود التابعة للمشروع :</h2></legend>
+        <b>رقم المشروع :</b>@Request["ProjectNo"]
+        <br />
+        <b>اسم المشروع :</b>@Request["ProjectName"]
+        <br />
+        <br />
+        @Html.ActionLink("الرجوع للمشروع", "Details", "Project", new { id = @Request["ProjectId"] }, new { @class = "back" })
+    </fieldset>
+
+    <div class="page-new">
+        @Html.ActionLink("إضافة عقد جديد", "Create", new { ProjectId = @Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] })
+    </div>
+
+    <div class="page-search">
+        @using (@Html.BeginForm("Index", "Contract", new { ProjectId = @Request["ProjectId"] }, FormMethod.Get, new { }))
+        {
+            <table>
+                <tr>
+                    <td>
+                        <b>@Html.DisplayNameFor(model => model.First().ContractNo)</b>
+                    </td>
+                    <td colspan="3">
+                        @Html.TextBox("contractNo")
+                    </td>
+                    <td>
+                        <b>@Html.DisplayNameFor(model => model.First().Name)</b>
+                    </td>
+                    <td>
+                        @Html.TextBox("contractName")
+                    </td>
+
+                </tr>
+               
+            </table>
+
+            <input type="submit" value="بحث" />
+            @Html.ActionLink("إلغاء البحث", "Index", null, new { @class = "clear" })
+        }
+    </div>
+
+
+    @if (Model.Count() == 0)
+    {
+        <div class="page-no-result">
+            <span>
+                @Helper.noResultMessage
+            </span>
+        </div>
+    }
+    else
+    {
+         @Html.ImageUrl(@Url.Content("~/Content/images/square_green.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[0] <b>  |  </b>
+         @Html.ImageUrl(@Url.Content("~/Content/images/square_yellow.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[1] <b>  |  </b>
+         @Html.ImageUrl(@Url.Content("~/Content/images/square_red.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[2]
+        
+        
+        
+         <table class="userList">
+         
+                <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ContractNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ContractorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ContractorNationality)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ExecutionPeriod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().SettlementDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().SigningDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().SiteDeliveryDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ActualStartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ProposedEndDate)
+                </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.First().LastContractProgress.ActualProgressPerc)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.First().LastContractProgress.ProgressRate)
+                    </th>
+                    <th>
+                        @Html.Label("التفاصيل")
+                    </th>
+                <th>
+                    @Html.Label("أسباب التعثر")
+                </th>
+                <th>
+                    @Html.Label("متابعة الإنجاز")
+                </th>
+                <th>
+                    @Html.Label("تعديل")
+                </th>
+                <th>
+                    @Html.Label("حذف")
+                </th>
+
+            </tr>
+
+             @foreach (var item in Model)
+             {
+                 using (Html.BeginForm("Delete", "Contract", new { id = item.ContractId, ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] }))              
+                 {               
+                    
+                      <tr>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.ContractNo)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.Name)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.ContractorName)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.ContractorNationality)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.Amount)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.ExecutionPeriod)
+                         </td>
+                         
+                         <td>
+                             @Html.UMQLabel(modelItem => item.SettlementDate)
+                         </td>
+                         <td>
+                             @Html.UMQLabel(modelItem => item.SigningDate)
+                         </td>
+                         <td>
+                             @Html.UMQLabel(modelItem => item.SiteDeliveryDate)
+                         </td>
+                         <td>
+                             @Html.UMQLabel(modelItem => item.ActualStartDate)
+                         </td>
+                         <td>
+                             @Html.UMQLabel(modelItem => item.ProposedEndDate)
+                         </td>
+                          <td>
+                              @Html.DisplayFor(modelItem => item.LastContractProgress.ActualProgressPerc)%
+                          </td>
+                          <td>
+                           @if(item.LastContractProgress.ProgressRate <= 0) 
+                           {
+                                @Html.ImageUrl(@Url.Content("~/Content/images/square_green.png"),20,20)
+                           }
+                           else if(item.LastContractProgress.ProgressRate < 25) 
+                           {
+                               @Html.ImageUrl(@Url.Content("~/Content/images/square_yellow.png"),20,20)
+                           }
+                           else if (item.LastContractProgress.ProgressRate >= 25)
+                           {
+                                @Html.ImageUrl(@Url.Content("~/Content/images/square_red.png"),20,20)
+                           }
+                          </td>
+                          <td>
+                              @Html.ActionLink("التفاصيل", "Details", new { id = item.ContractId, ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] })
+                          </td>
+                         <td>
+                             @Html.ActionLink("أسباب التعثر", "Index", "Stumbles", new { id = item.ContractId, Name = item.Name , No=item.ContractNo, IsProject = 0 }, new { })
+                         </td>
+                         <td>
+                             @Html.ActionLink("متابعة الإنجاز", "Index", "ContractProgress", new { ContractId = item.ContractId, ContractName = item.Name, ContractNo = item.ContractNo, ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] }, new { })
+                         </td>
+                         <td>
+                             @Html.ActionLink("تعديل", "Edit", new { id = item.ContractId, ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] })
+                         </td>
+                         <td>
+                             <input type="submit" value="حذف" onclick="return confirm('هل تريد فعلا حذف هذا العنصر.');" />
+                         </td>
+                     </tr>                     
+                 
+                  }               
+            }
+
+         </table> 
+        
+         @Html.PagedListPager(Model, page => Url.Action("Index", new { page, ContractName = Request.QueryString["ContractName"], ProjectId = @Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
+    }
+
+
+</div>

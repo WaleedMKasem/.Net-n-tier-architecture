@@ -1,0 +1,75 @@
+﻿@using Arabia.Web.Common;
+@model Arabia.Core.Contracts.ContractProgress
+
+@{
+    ViewBag.Title = "تعديل البيانات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="input-page">
+        <div class="page-title">
+            <h2>تعديل البيانات</h2>
+        </div>
+        <div class="page-body">
+            <div class="message-error">
+                @Html.ValidationSummary(true)
+            </div>
+
+
+
+            <fieldset class="fieldset">
+
+                <legend><h2>نسبة الإنجاز للعقد :</h2></legend>
+                <b>رقم المشروع :</b>@Request["ProjectNo"]
+                <br />
+                <b>اسم المشروع :</b>@Request["ProjectName"]
+                <br />
+                <b>رقم العقد :</b>@Request["ContractNo"]
+                <br />
+                <b>اسم العقد :</b>@Request["ContractName"]
+                <br />
+                <br />
+
+                <table class="userContent">
+                    <tr>
+
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ActualProgressPerc)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.ActualProgressPerc)
+                            @Html.ValidationMessageFor(model => model.ActualProgressPerc)
+
+                            @Html.HiddenFor(model => model.EvaluationDate)
+                            @Html.HiddenFor(model => model.ProgressId)
+                            @Html.HiddenFor(model => model.ContractId)
+                            @Html.HiddenFor(model => model.UserId)
+                        </td>
+
+                    </tr>
+
+                </table>
+
+
+                <div class="buttons">
+                    <input type="submit" value="حفظ" class="save" />
+                    @Html.ActionLink("إلغاء الأمر", "Index",
+                    new
+                    {
+                        ContractId = Request["ContractId"],
+                        ContractName = Request["ContractName"],
+                        ContractNo = Request["ContractNo"],
+                        ProjectName = @Request["ProjectName"],
+                        ProjectNo = Request["ProjectNo"]
+             
+                    }, new { @class = "back" })
+                               
+                
+                  </div>
+        </div>
+    </div>
+}

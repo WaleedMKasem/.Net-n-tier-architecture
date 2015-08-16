@@ -1,0 +1,84 @@
+﻿
+@using PagedList.Mvc;
+@using PagedList;
+@using Arabia.Web.Common;
+@model IPagedList<Arabia.Core.Projects.ProjectTotalSpending>
+
+@{
+    ViewBag.Title = "إجمالى المنصرف على المشروع";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="list-page">
+    <div class="page-title">
+        <h2>إجمالى المنصرف على المشروع :</h2> 
+        <b>رقم المشروع :</b>@Request["ProjectNo"]
+        <br />
+        <b>اسم المشروع :</b>@Request["ProjectName"]
+        <br />
+        <br />
+        @Html.ActionLink("الرجوع للمشروع", "Details", "Project", new { id = @Request["ProjectId"] }, new { @class = "back" })
+    </div>
+
+    <div class="page-new">
+        @Html.ActionLink("إضافة جديدة لإجمالى المنصرف على المشروع", "Create", new { ProjectId = @Request["ProjectId"], ProjectName = @Request["ProjectName"],ProjectNo=Request["ProjectNo"] })
+    </div>
+
+    @if (Model.Count() == 0)
+    {
+        <div class="page-no-result">
+            <span>
+                @Helper.noResultMessage
+            </span>
+        </div>
+    }
+    else
+    {
+
+         <table class="userList">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().SpendingDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TotalSpending)
+                </th>
+                <th>
+                    @Html.Label("تعديل")
+                </th>
+                <th>
+                    @Html.Label("حذف")
+                </th>
+            </tr>
+
+             @foreach (var item in Model)
+            {
+                using (Html.BeginForm("Delete", "ProjectTotalSpendings", new { id = item.ProjectTotalSpendingsId, ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] }))
+                {
+               
+                      <tr>                   
+                            <td>
+                               @Html.UMQLabel(modelItem => item.SpendingDate)                  
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.TotalSpending)
+                            </td>
+                          <td>
+                              @Html.ActionLink("تعديل", "Edit", new { id = item.ProjectTotalSpendingsId, ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] })
+                          </td>
+                          <td>
+                              <input type="submit" value="حذف" onclick="return confirm('هل تريد فعلا حذف هذا العنصر.');" />
+                          </td>
+
+                      </tr>
+           
+                 }
+            
+             }
+
+</table>
+        
+         @Html.PagedListPager(Model, page => Url.Action("Index", new { page, ProjectId = @Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"]  }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
+    }
+</div>

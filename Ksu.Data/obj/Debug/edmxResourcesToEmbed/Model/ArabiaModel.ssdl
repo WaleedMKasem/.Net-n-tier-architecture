@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArabiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ContractHistory">
+    <Key>
+      <PropertyRef Name="ContractHistoryId" />
+    </Key>
+    <Property Name="ContractHistoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractId" Type="int" Nullable="false" />
+    <Property Name="ContractorName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ContractorNationalityId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="ExecutionPeriod" Type="smallint" Nullable="false" />
+    <Property Name="SettlementDate" Type="datetime" Nullable="false" />
+    <Property Name="SigningDate" Type="datetime" Nullable="false" />
+    <Property Name="SiteDeliveryDate" Type="datetime" Nullable="false" />
+    <Property Name="ActualStartDate" Type="datetime" Nullable="false" />
+    <Property Name="ProposedEndDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="OfficerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractProgress">
+    <Key>
+      <PropertyRef Name="ProgressId" />
+    </Key>
+    <Property Name="ProgressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractId" Type="int" Nullable="false" />
+    <Property Name="ActualProgressPerc" Type="tinyint" Nullable="false" />
+    <Property Name="EvaluationDate" Type="datetime" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contracts">
+    <Key>
+      <PropertyRef Name="ContractId" />
+    </Key>
+    <Property Name="ContractId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="ContractNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Governorates">
+    <Key>
+      <PropertyRef Name="GovernorateId" />
+    </Key>
+    <Property Name="GovernorateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nationalities">
+    <Key>
+      <PropertyRef Name="NationalityId" />
+    </Key>
+    <Property Name="NationalityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjectAnnualApproval">
+    <Key>
+      <PropertyRef Name="ProjectAnnualApprovalId" />
+    </Key>
+    <Property Name="ProjectAnnualApprovalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="Year" Type="smallint" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="ExpectedStartDate" Type="datetime" />
+    <Property Name="ProposedStartDate" Type="datetime" />
+    <Property Name="ActualEndDate" Type="datetime" />
+    <Property Name="ApprovalDate" Type="datetime" Nullable="false" />
+    <Property Name="TotalCost" Type="float" Nullable="false" />
+    <Property Name="Region" Type="nvarchar" MaxLength="1000" />
+    <Property Name="GovernorateId" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProjectTotalSpendings">
+    <Key>
+      <PropertyRef Name="ProjectTotalSpendingsId" />
+    </Key>
+    <Property Name="ProjectTotalSpendingsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="TotalSpending" Type="float" Nullable="false" />
+    <Property Name="SpendingDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StumbleAttachments">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StumbleId" Type="int" Nullable="false" />
+    <Property Name="Attachment" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stumbles">
+    <Key>
+      <PropertyRef Name="StumbleId" />
+    </Key>
+    <Property Name="StumbleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObjId" Type="int" Nullable="false" />
+    <Property Name="IsProject" Type="bit" Nullable="false" />
+    <Property Name="StumbleReason" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="RoleId" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ContractHistory_Contracts">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+    <End Role="ContractHistory" Type="Self.ContractHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="ContractHistory">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractHistory_Nationalities">
+    <End Role="Nationalities" Type="Self.Nationalities" Multiplicity="1" />
+    <End Role="ContractHistory" Type="Self.ContractHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nationalities">
+        <PropertyRef Name="NationalityId" />
+      </Principal>
+      <Dependent Role="ContractHistory">
+        <PropertyRef Name="ContractorNationalityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractHistory_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="ContractHistory" Type="Self.ContractHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ContractHistory">
+        <PropertyRef Name="OfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProgress_Contracts">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+    <End Role="ContractProgress" Type="Self.ContractProgress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="ContractProgress">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractProgress_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="ContractProgress" Type="Self.ContractProgress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ContractProgress">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contracts_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAnnualApproval_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+    <End Role="ProjectAnnualApproval" Type="Self.ProjectAnnualApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="ProjectAnnualApproval">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_Governorates">
+    <End Role="Governorates" Type="Self.Governorates" Multiplicity="0..1" />
+    <End Role="Projects" Type="Self.Projects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Governorates">
+        <PropertyRef Name="GovernorateId" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="GovernorateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTotalSpendings_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+    <End Role="ProjectTotalSpendings" Type="Self.ProjectTotalSpendings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="ProjectTotalSpendings">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StumbleAttachments_Stumbles">
+    <End Role="Stumbles" Type="Self.Stumbles" Multiplicity="1" />
+    <End Role="StumbleAttachments" Type="Self.StumbleAttachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stumbles">
+        <PropertyRef Name="StumbleId" />
+      </Principal>
+      <Dependent Role="StumbleAttachments">
+        <PropertyRef Name="StumbleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ArabiaModelStoreContainer">
+    <EntitySet Name="ContractHistory" EntityType="Self.ContractHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractProgress" EntityType="Self.ContractProgress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Governorates" EntityType="Self.Governorates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nationalities" EntityType="Self.Nationalities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectAnnualApproval" EntityType="Self.ProjectAnnualApproval" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectTotalSpendings" EntityType="Self.ProjectTotalSpendings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StumbleAttachments" EntityType="Self.StumbleAttachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stumbles" EntityType="Self.Stumbles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ContractHistory_Contracts" Association="Self.FK_ContractHistory_Contracts">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="ContractHistory" EntitySet="ContractHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractHistory_Nationalities" Association="Self.FK_ContractHistory_Nationalities">
+      <End Role="Nationalities" EntitySet="Nationalities" />
+      <End Role="ContractHistory" EntitySet="ContractHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractHistory_Users" Association="Self.FK_ContractHistory_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ContractHistory" EntitySet="ContractHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProgress_Contracts" Association="Self.FK_ContractProgress_Contracts">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="ContractProgress" EntitySet="ContractProgress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractProgress_Users" Association="Self.FK_ContractProgress_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ContractProgress" EntitySet="ContractProgress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contracts_Projects" Association="Self.FK_Contracts_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAnnualApproval_Projects" Association="Self.FK_ProjectAnnualApproval_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectAnnualApproval" EntitySet="ProjectAnnualApproval" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_Governorates" Association="Self.FK_Projects_Governorates">
+      <End Role="Governorates" EntitySet="Governorates" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTotalSpendings_Projects" Association="Self.FK_ProjectTotalSpendings_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectTotalSpendings" EntitySet="ProjectTotalSpendings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StumbleAttachments_Stumbles" Association="Self.FK_StumbleAttachments_Stumbles">
+      <End Role="Stumbles" EntitySet="Stumbles" />
+      <End Role="StumbleAttachments" EntitySet="StumbleAttachments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

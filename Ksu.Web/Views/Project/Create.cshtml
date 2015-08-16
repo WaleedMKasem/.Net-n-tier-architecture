@@ -1,0 +1,178 @@
+﻿@using Arabia.Web.Common;
+@model Arabia.Core.Projects.FullProject
+
+@{
+    ViewBag.Title = "إضافة جديد";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+} 
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+  
+    <div class="input-page">
+        <div class="page-title">
+            <h2>إضافة جديد</h2>
+        </div>
+        <div class="page-body">
+            <div class="message-error">
+                @Html.ValidationSummary(true)
+            </div>
+
+            <fieldset class="fieldset">
+                <legend class="title">المشروعات المعتمدة بميزانية الجامعة</legend>
+                <table class="userContent">
+                 
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ProjectNo)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.ProjectNo)
+                            @Html.ValidationMessageFor(model => model.ProjectNo)
+                        </td>
+                    </tr>
+
+                       <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.Name)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.Name)
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.status)
+                        </td>
+                        <td class="userData">
+                            @foreach(var item in ViewBag.ProjectStatus) {
+                               if (item.Key == 3)
+                                {
+                                    @Html.RadioButtonFor(model => model.status, (int)item.Key, new { Checked = true})
+                                    @Html.Label((string)@item.Value)
+                                }
+                                else
+                                {
+                                    @Html.RadioButtonFor( model=>model.status ,(int)item.Key)
+                                    @Html.Label((string)@item.Value)
+                                }                         
+                            }
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ProposedStartDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.ProposedStartDate)                           
+                            @Html.ValidationMessageFor(model => model.ProposedStartDate)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ExpectedStartDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.ExpectedStartDate)
+                            @Html.ValidationMessageFor(model => model.ExpectedStartDate)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ActualEndDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.ActualEndDate) 
+                            @Html.ValidationMessageFor(model => model.ActualEndDate)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ApprovalDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.ApprovalDate)
+                            @Html.ValidationMessageFor(model => model.ApprovalDate)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.TotalCost)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.TotalCost)
+                            @Html.ValidationMessageFor(model => model.TotalCost)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.LastTotalSpending)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.LastTotalSpending)
+                            @Html.ValidationMessageFor(model => model.LastTotalSpending)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model=> model.FirstApprovalYear)
+                        </td>
+                        <td class="userData">
+                            @Html.TextBoxFor(model => model.FirstApprovalYear, new { size = "4", maxlength = "4" })
+                            @Html.ValidationMessageFor(model => model.FirstApprovalYear)
+                        </td>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.FirstApprovalAmount)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.FirstApprovalAmount)
+                            @Html.ValidationMessageFor(model => model.FirstApprovalAmount)
+                        </td>
+                   </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.Region)
+                        </td>
+                        <td class="userData"> 
+                            @Html.EditorFor(model => model.Region) 
+                            @Html.ValidationMessageFor(model => model.Region)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.GovernorateId)
+                        </td>
+                        <td class="userData">
+                            @Html.DropDownListFor(model => model.GovernorateId, new SelectList(ViewBag.Governorates, "GovernorateId", "Name"), "--اختر--")
+                            @Html.ValidationMessageFor(model => model.GovernorateId)
+                        </td>
+                    </tr>
+
+                  
+
+ 
+                </table>
+    </fieldset>
+	          <div class="buttons">
+                <input type="submit" value="حفظ" class="save" />
+                @Html.ActionLink("إلغاء الأمر", "Index",null, new { @class = "back" })
+            </div>
+        </div>
+    </div>
+}
+
+
+
+

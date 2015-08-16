@@ -1,0 +1,147 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using Arabia.Web.Common;
+@model IPagedList<Arabia.Core.Contracts.FullContractProgress>
+
+@{
+    ViewBag.Title = "متابعة الإنجاز";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="list-page">
+
+    <fieldset>
+        <legend><h2>نسبة الإنجاز للعقد :</h2></legend>
+        <b>رقم المشروع :</b>@Request["ProjectNo"]
+        <br />
+        <b>اسم المشروع :</b>@Request["ProjectName"]
+        <br />
+        <b>رقم العقد :</b>@Request["ContractNo"]
+        <br />
+        <b>اسم العقد :</b>@Request["ContractName"]
+        <br />
+        <br />
+    </fieldset>
+
+    <div class="page-new">
+        @Html.ActionLink("إضافة نسبة إنجاز", "Create", new { 
+       ContractId = Request["ContractId"], ContractName = Request["ContractName"], ContractNo = Request["ContractNo"]
+       ,ProjectName = @Request["ProjectName"],
+      ProjectNo = Request["ProjectNo"]
+   })
+    </div>
+   
+    @if (Model.Count() == 0)
+    {
+        <div class="page-no-result">
+            <span>
+                @Helper.noResultMessage
+            </span>
+        </div>
+    }
+    else
+    {
+         @Html.ImageUrl(@Url.Content("~/Content/images/square_green.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[0] <b>  |  </b>
+         @Html.ImageUrl(@Url.Content("~/Content/images/square_yellow.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[1] <b>  |  </b>
+         @Html.ImageUrl(@Url.Content("~/Content/images/square_red.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[2]
+        
+
+        <table class="userList">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().EvaluationDate)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ElapsedPeriod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ElapsedPeriodPerc)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ActualProgressPerc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ProgressRate)
+                </th>
+                <th>
+                    @Html.Label("تعديل")
+                </th>
+                <th>
+                    @Html.Label("حذف")
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                using (Html.BeginForm("Delete", "ContractProgress", new
+                    {  id = item.ProgressId       ,
+                        ContractId = Request["ContractId"], ContractName = Request["ContractName"], ContractNo = Request["ContractNo"]
+                       ,ProjectName = @Request["ProjectName"],
+                       ProjectNo = Request["ProjectNo"]
+                    }               
+                    ))
+                {
+
+                    <tr>
+                        <td>
+                            @Html.UMQLabel(modelItem => item.EvaluationDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ElapsedPeriod)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ElapsedPeriodPerc)%
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ActualProgressPerc)%
+                        </td>
+                        <td>                      
+                            @if (item.ProgressRate <= 0)
+                            {
+                                @Html.ImageUrl(@Url.Content("~/Content/images/square_green.png"), 20, 20)
+                            }
+                            else if (item.ProgressRate < 25)
+                            {
+                                @Html.ImageUrl(@Url.Content("~/Content/images/square_yellow.png"), 20, 20)
+                            }
+                            else if (item.ProgressRate >= 25)
+                            {
+                                @Html.ImageUrl(@Url.Content("~/Content/images/square_red.png"), 20, 20)
+                            }
+                        </td>
+                        <td>
+                            @Html.ActionLink("تعديل", "Edit", new
+                             {  id = item.ProgressId       ,
+                        ContractId = Request["ContractId"], ContractName = Request["ContractName"], ContractNo = Request["ContractNo"]
+                       ,ProjectName = @Request["ProjectName"],
+                       ProjectNo = Request["ProjectNo"]
+                    }   
+                            )
+                        </td>
+                        <td>
+                            <input type="submit" value="حذف" onclick="return confirm('هل تريد فعلا حذف هذا العنصر.');" />
+                        </td>
+
+                    </tr>
+
+                }
+
+            }
+
+        </table>
+
+        @Html.PagedListPager(Model, page => Url.Action("Index", new
+        {  page,
+           ContractId = Request["ContractId"], ContractName = Request["ContractName"], ContractNo = Request["ContractNo"]
+           ,ProjectName = @Request["ProjectName"],
+           ProjectNo = Request["ProjectNo"]
+       }   
+       ), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
+    }
+</div>

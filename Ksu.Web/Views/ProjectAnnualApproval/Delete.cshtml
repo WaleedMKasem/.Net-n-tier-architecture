@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @if (!string.IsNullOrEmpty( ViewBag.ErrorMessage))
+    {
+        <script>
+            alert("@ViewBag.ErrorMessage");
+            var ProjectName ="@Request["ProjectName"].ToString()";
+            var url ='@Url.Action("Index", "ProjectAnnualApproval")' + '?ProjectId='
+                + @Request["ProjectId"] + '&ProjectName='+ ProjectName;
+            window.location.href = url;
+
+
+       </script>
+    }
+ 
+    </div>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SportsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Competition">
+    <Key>
+      <PropertyRef Name="Competition_Id" />
+    </Key>
+    <Property Name="Competition_Id" Type="int" Nullable="false" />
+    <Property Name="Competition_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Competition_Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Competition_Format" Type="nvarchar" MaxLength="150" />
+    <Property Name="area_id" Type="int" />
+    <Property Name="Competition_Team_Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Competition_soccer_Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Last_updated" Type="datetime" />
+    <Property Name="DisplayOrder" Type="int" />
+    <Property Name="Competition_Authorized" Type="bit" />
+    <Property Name="Competition_Active" Type="bit" />
+    <Property Name="Competition_InsDate" Type="datetime" />
+    <Property Name="Competition_LastUpdate" Type="datetime" />
+    <Property Name="Competition_Order" Type="int" />
+  </EntityType>
+  <EntityContainer Name="SportsModelStoreContainer">
+    <EntitySet Name="Competition" EntityType="Self.Competition" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

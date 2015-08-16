@@ -1,0 +1,92 @@
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Web.Tests.dll.config
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Web.Tests.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Web.Tests.pdb
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Web.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Helpers.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Http.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Mvc.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Razor.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Service.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Core.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\PagedList.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Unity.Mvc4.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Data.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\EntityFramework.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Web.pdb
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Helpers.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Http.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Mvc.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.Razor.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Service.pdb
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Core.pdb
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\PagedList.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Arabia.Data.pdb
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\EntityFramework.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\Waleed\Arabia Template\Ksu.Web.Tests\obj\Debug\Arabia.Web.Tests.csprojResolveAssemblyReference.cache
+D:\Waleed\Arabia Template\Ksu.Web.Tests\obj\Debug\Arabia.Web.Tests.dll
+D:\Waleed\Arabia Template\Ksu.Web.Tests\obj\Debug\Arabia.Web.Tests.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Web.Tests.dll.config
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Web.Tests.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Web.Tests.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Web.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Helpers.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Http.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Mvc.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Razor.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Service.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Core.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Unity.Mvc4.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Data.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\EntityFramework.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Web.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Helpers.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Http.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Mvc.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.Razor.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Service.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Core.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Arabia.Data.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\EntityFramework.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\obj\Debug\Arabia.Web.Tests.csprojResolveAssemblyReference.cache
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\obj\Debug\Arabia.Web.Tests.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Tests\obj\Debug\Arabia.Web.Tests.pdb

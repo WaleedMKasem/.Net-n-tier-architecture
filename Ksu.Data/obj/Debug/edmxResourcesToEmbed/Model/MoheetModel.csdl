@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoheetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CMS_Document">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentTitle" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentSubTitle" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentSummary" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentBodyText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentKeywords" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentTypeID" Type="Byte" />
+    <Property Name="ImageID" Type="Int32" />
+    <Property Name="ImageComment" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StatusID" Type="Byte" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="SiteID" Type="Byte" />
+    <Property Name="RatingValue" Type="Int32" />
+    <Property Name="RatingCount" Type="Int32" />
+    <Property Name="ViewCount" Type="Int32" />
+    <Property Name="PrintCount" Type="Int32" />
+    <Property Name="SaveCount" Type="Int32" />
+    <Property Name="SendCount" Type="Int32" />
+    <Property Name="CommentsAllowed" Type="Boolean" />
+    <Property Name="ShowInTicker" Type="Boolean" />
+    <Property Name="DocumentGUID" Type="Guid" />
+    <Property Name="TempDocumentBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Complete" Type="Byte" />
+    <Property Name="AuthorName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AuthorImageID" Type="Int32" />
+    <Property Name="EditorID" Type="Int32" />
+    <Property Name="DocumentLocations" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentCountries" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentSubjects" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentNews" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentImages" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentCompetetions" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentTeams" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentPlayers" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentMatches" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentVideos" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="SiteIDs" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="isInfographic" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="Moheet_BackOfficeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CMS_Document" EntityType="Self.CMS_Document" />
+  </EntityContainer>
+</Schema>

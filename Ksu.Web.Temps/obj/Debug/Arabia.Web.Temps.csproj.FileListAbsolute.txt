@@ -1,0 +1,63 @@
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\Arabia.Web.Temps.dll.config
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\Arabia.Web.Temps.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\Arabia.Web.Temps.pdb
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\Microsoft.Web.Infrastructure.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\Newtonsoft.Json.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\PagedList.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\PagedList.Mvc.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Net.Http.Formatting.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Helpers.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Http.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Http.WebHost.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Mvc.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Razor.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.WebPages.Deployment.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.WebPages.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.WebPages.Razor.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\PagedList.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\PagedList.Mvc.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\Newtonsoft.Json.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Net.Http.Formatting.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Helpers.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Http.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Http.WebHost.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Mvc.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.Razor.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.WebPages.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.WebPages.Deployment.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\bin\System.Web.WebPages.Razor.xml
+D:\Waleed\Arabia Template\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.dll
+D:\Waleed\Arabia Template\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.pdb
+D:\Waleed\Arabia Template\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.csprojResolveAssemblyReference.cache
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\Arabia.Web.Temps.dll.config
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\Arabia.Web.Temps.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\Arabia.Web.Temps.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\Microsoft.Web.Infrastructure.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\Newtonsoft.Json.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\PagedList.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\PagedList.Mvc.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Net.Http.Formatting.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Helpers.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Http.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Http.WebHost.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Mvc.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Razor.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.Deployment.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.Razor.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\PagedList.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\PagedList.Mvc.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\Newtonsoft.Json.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Net.Http.Formatting.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Helpers.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Http.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Http.WebHost.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Mvc.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.Razor.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.Deployment.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\bin\System.Web.WebPages.Razor.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web.Temps\obj\Debug\Arabia.Web.Temps.pdb

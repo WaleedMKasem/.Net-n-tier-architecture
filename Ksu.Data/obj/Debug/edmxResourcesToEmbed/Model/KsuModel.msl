@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArabiaModelStoreContainer" CdmEntityContainer="ArabiaEntities">
+    <EntitySetMapping Name="ContractHistories">
+      <EntityTypeMapping TypeName="ArabiaModel.ContractHistory">
+        <MappingFragment StoreEntitySet="ContractHistory">
+          <ScalarProperty Name="OfficerId" ColumnName="OfficerId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ProposedEndDate" ColumnName="ProposedEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="SiteDeliveryDate" ColumnName="SiteDeliveryDate" />
+          <ScalarProperty Name="SigningDate" ColumnName="SigningDate" />
+          <ScalarProperty Name="SettlementDate" ColumnName="SettlementDate" />
+          <ScalarProperty Name="ExecutionPeriod" ColumnName="ExecutionPeriod" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ContractorNationalityId" ColumnName="ContractorNationalityId" />
+          <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractHistoryId" ColumnName="ContractHistoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractProgresses">
+      <EntityTypeMapping TypeName="ArabiaModel.ContractProgress">
+        <MappingFragment StoreEntitySet="ContractProgress">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EvaluationDate" ColumnName="EvaluationDate" />
+          <ScalarProperty Name="ActualProgressPerc" ColumnName="ActualProgressPerc" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ProgressId" ColumnName="ProgressId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="ArabiaModel.Contract">
+        <MappingFragment StoreEntitySet="Contracts">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Governorates">
+      <EntityTypeMapping TypeName="ArabiaModel.Governorate">
+        <MappingFragment StoreEntitySet="Governorates">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="GovernorateId" ColumnName="GovernorateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nationalities">
+      <EntityTypeMapping TypeName="ArabiaModel.Nationality">
+        <MappingFragment StoreEntitySet="Nationalities">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectAnnualApprovals">
+      <EntityTypeMapping TypeName="ArabiaModel.ProjectAnnualApproval">
+        <MappingFragment StoreEntitySet="ProjectAnnualApproval">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectAnnualApprovalId" ColumnName="ProjectAnnualApprovalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="ArabiaModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="GovernorateId" ColumnName="GovernorateId" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ProposedStartDate" ColumnName="ProposedStartDate" />
+          <ScalarProperty Name="ExpectedStartDate" ColumnName="ExpectedStartDate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProjectNo" ColumnName="ProjectNo" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTotalSpendings">
+      <EntityTypeMapping TypeName="ArabiaModel.ProjectTotalSpending">
+        <MappingFragment StoreEntitySet="ProjectTotalSpendings">
+          <ScalarProperty Name="SpendingDate" ColumnName="SpendingDate" />
+          <ScalarProperty Name="TotalSpending" ColumnName="TotalSpending" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectTotalSpendingsId" ColumnName="ProjectTotalSpendingsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StumbleAttachments">
+      <EntityTypeMapping TypeName="ArabiaModel.StumbleAttachment">
+        <MappingFragment StoreEntitySet="StumbleAttachments">
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="StumbleId" ColumnName="StumbleId" />
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stumbles">
+      <EntityTypeMapping TypeName="ArabiaModel.Stumble">
+        <MappingFragment StoreEntitySet="Stumbles">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="StumbleReason" ColumnName="StumbleReason" />
+          <ScalarProperty Name="IsProject" ColumnName="IsProject" />
+          <ScalarProperty Name="ObjId" ColumnName="ObjId" />
+          <ScalarProperty Name="StumbleId" ColumnName="StumbleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ArabiaModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="JobCode" ColumnName="JobCode" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

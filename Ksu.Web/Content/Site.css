@@ -1,0 +1,225 @@
+﻿body {
+    direction:rtl;
+}
+/* INPUT PAGES */
+.input-page{}
+.input-page .page-title{}
+.input-page .page-body{margin:0;padding:0;color:#555;background-color:inherit;}  
+.input-page .buttons{margin-bottom:5px;margin-top:5px;clear:both;}
+
+.fieldset{padding:10px;margin-bottom:15px;border:1px solid #eee;border-radius:5px;width:90%;}
+.fieldset .title{margin:-17px 0 14px;}
+.fieldset .title strong{background:#fff;}
+.fieldset .inputs{margin-bottom:5px;}
+.fieldset .inputs label{display:inline-block;width:130px;margin-right:10px;}
+
+
+/* List PAGES */
+.list-page{}
+.list-page .page-title{}
+.list-page .page-new{}
+.list-page .page-search{margin-top:20px;margin-bottom:20px;}
+
+/* TABLE CONTENT */
+table.userContent{border-collapse:collapse;color:#333;font-size:14px;margin:0;width:98%;vertical-align:middle;text-align:right;}
+table.userContent td.userTitle{padding:4px;}
+table.userContent td.userData{padding:4px;}
+td.userTitle{text-align:right;vertical-align:middle;white-space:nowrap;width:100px;}
+td.userTitle img{vertical-align:bottom;padding-right:2px;}
+td.userData{text-align:right;vertical-align:middle;}
+td.userData .text-box.single-line{border:1px solid #A7BAC5;width:250px;padding:2px;width:98%}
+.t-grid .text-box.single-line{border:1px solid #A7BAC5;padding:2px;}
+td.userData textarea{border:1px solid #ACACAC;width:250px;padding:2px;}
+td.userData .t-combobox{width:256px;}
+td.userData .t-numerictextbox .t-input{border:1px solid #ACACAC;width:250px;padding:2px;}
+tr.adminSeparator hr{background-color:#D3D3D3;border:medium none;color:#D3D3D3;height:1px;margin-top:10px;margin-bottom:10px;padding:0;}
+span.nop-tooltip{white-space:nowrap;}
+
+/* TABLE LIST */
+table.userList{border:1px solid black;border-collapse:collapse; color:#333;font-size:14px;margin:0;width:100%;vertical-align:middle;text-align:right;}
+table.userList td, table.userList th { border:1px solid black;padding:5px; }
+
+
+/* VALIDATION AND ERRORS */
+.message-error{font-family:Verdana,Arial,sans-serif;font-size:10px;font-weight:700;color:red;}
+.message-error ul{padding:0px;}
+.message-error ul li{list-style:none;}
+.validation-summary-errors{font-family:Verdana,Arial,sans-serif;font-size:10px;font-weight:700;color:red;}
+.field-validation-error{font-family:Verdana,Arial,sans-serif;font-size:15px;color:red;}
+.required{color:red;}
+
+/* PAGED LIST */
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.pagination > li {
+  display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: #eeeeee;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  cursor: default;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999999;
+  cursor: not-allowed;
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 10px 16px;
+  font-size: 18px;
+}
+
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.pager:before,
+.pager:after {
+  display: table;
+  content: " ";
+}
+
+.pager:after {
+  clear: both;
+}
+
+.pager:before,
+.pager:after {
+  display: table;
+  content: " ";
+}
+
+.pager:after {
+  clear: both;
+}
+
+.pager li {
+  display: inline;
+}
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 15px;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  color: #999999;
+  cursor: not-allowed;
+  background-color: #ffffff;
+}
+
+.selected-page {
+    color:red;
+}
+
+
+
+

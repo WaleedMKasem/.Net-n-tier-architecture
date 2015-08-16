@@ -1,0 +1,213 @@
+﻿@using Ksu.Web.Common;
+@model Ksu.Core.Contracts.FullContract
+
+@{
+    ViewBag.Title = "إضافة جديد";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+
+    function CalcProposedEndDate(){
+        var ExecutionPeriodVal = $('#ExecutionPeriod').val();
+        var SiteDeliveryDateVal = $('#SiteDeliveryDate').prop('value');
+
+        if ($.trim(ExecutionPeriodVal) != "") {
+
+            if ($.trim(SiteDeliveryDateVal) != "") {
+                var ExecutionPeriodValInt = parseInt(ExecutionPeriodVal);
+                var url = '@Url.Action("CalculateProposedEndDate")' + '?ExecutionPeriod=' + ExecutionPeriodValInt
+                    +'&SiteDeliveryDate='+SiteDeliveryDateVal;
+                @*var value = '@Url.Action("CalculateProposedEndDate")';
+                $('#ProposedEndDate').val(value);*@
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (Result) {
+
+                        $('#ProposedEndDate').val(Result);
+                    },
+
+                    error: function (Result) {
+
+                        alert(Result.status + " " + Result.statusText);
+                    }
+                });
+            }
+            else
+                $('#ProposedEndDate').val("");
+        }
+        else
+            $('#ProposedEndDate').val(SiteDeliveryDateVal);
+    }
+
+    $(function () {
+
+        //$('#ProposedEndDate').prop('readOnly', true);
+        //$("#ProposedEndDate").css("width", "100px");
+
+        $('#SiteDeliveryDate').blur( function () {
+
+            CalcProposedEndDate();
+        });
+
+        $('#ExecutionPeriod').blur(function () {
+
+            CalcProposedEndDate();
+        });
+
+    });
+
+</script>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="input-page">
+        
+        <div class="page-title">
+            <h2>إضافة جديد</h2>
+        </div>
+    
+        <div class="page-body">
+            
+            <div class="message-error">
+                @Html.ValidationSummary(true)
+            </div>
+
+            <fieldset class="fieldset">
+                <legend class="title">العقود التابعة للمشروع :@Request["ProjectName"]</legend>
+
+                <table class="userContent">
+                   
+                     <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ContractNo)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.ContractNo)
+                            @Html.ValidationMessageFor(model => model.ContractNo)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.Name)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.Name)
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ContractorName)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.ContractorName)
+                            @Html.ValidationMessageFor(model => model.ContractorName)
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ContractorNationality)
+                        </td>
+                        <td class="userData">
+                            @Html.DropDownListFor(model => model.ContractorNationalityId, new SelectList(ViewBag.Nationalities, "NationalityId", "Name"), "--اختر--")
+                            @Html.ValidationMessageFor(model => model.ContractorNationalityId)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.Amount)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.Amount)
+                            @Html.ValidationMessageFor(model => model.Amount)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ExecutionPeriod)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.ExecutionPeriod)
+                            @Html.ValidationMessageFor(model => model.ExecutionPeriod)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.SettlementDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.SettlementDate)
+                            @Html.ValidationMessageFor(model => model.SettlementDate)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.SigningDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.SigningDate)
+                            @Html.ValidationMessageFor(model => model.SigningDate)
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.SiteDeliveryDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.SiteDeliveryDate)
+                            @Html.ValidationMessageFor(model => model.SiteDeliveryDate)
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ActualStartDate)
+                        </td>
+                        <td class="userData">
+                            @Html.UMQDate(model => model.ActualStartDate)
+                            @Html.ValidationMessageFor(model => model.ActualStartDate)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.ProposedEndDate)
+                        </td>
+                        <td class="userData">
+                            @Html.TextBoxFor(model => model.ProposedEndDate, new { disabled = true })
+                        </td>
+                    </tr>
+
+
+
+                </table>
+
+
+            </fieldset>
+
+                <div class="buttons">
+                    <input type="submit" value="حفظ" class="save" />
+                    @Html.ActionLink("إلغاء الأمر", "Index", new { ProjectId = Request["ProjectId"], ProjectName = Request["ProjectName"] }, new { @class = "back" })
+                </div>
+
+</div>
+           
+
+        </div>
+    
+}
+

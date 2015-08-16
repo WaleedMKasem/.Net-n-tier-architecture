@@ -1,0 +1,59 @@
+@model IEnumerable<Ksu.Core.Contracts.Contract>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            ContractNo
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            ContractHistories
+        </th>
+        <th>
+            ContractProgresses
+        </th>
+        <th>
+            Project
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContractId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContractId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContractId })
+        </td>
+        <td>
+			@item.ContractNo
+        </td>
+        <td>
+			@item.Name
+        </td>
+        <td>
+			@(item.ContractHistories == null ? "None" : item.ContractHistories.Count.ToString())
+        </td>
+        <td>
+			@(item.ContractProgresses == null ? "None" : item.ContractProgresses.Count.ToString())
+        </td>
+        <td>
+			@(item.Project == null ? "None" : item.Project.Name)
+        </td>
+    </tr>
+}
+
+</table>
+
+

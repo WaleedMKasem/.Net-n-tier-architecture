@@ -1,0 +1,66 @@
+﻿@using Arabia.Web.Common;
+@model Arabia.Core.Projects.ProjectAnnualApproval
+
+@{
+    ViewBag.Title = "إضافة جديد";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="input-page">
+        <div class="page-title">
+            <h2>إضافة جديد</h2>
+        </div>
+        <div class="page-body">
+            <div class="message-error">
+                @Html.ValidationSummary(true)
+            </div>
+
+
+
+            <fieldset class="fieldset">
+
+                <legend class="title">
+                    <b>الإعتماد السنوى للمشروع :</b>                  
+                </legend>
+                <b>رقم المشروع :</b>@Request["ProjectNo"]
+                <br />
+                <b>اسم المشروع :</b>@Request["ProjectName"]
+                <br />
+                <br />
+
+                <table class="userContent">
+                    <tr>
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.Year)
+                        </td>
+                        <td class="userData">
+                            @Html.TextBoxFor(model => model.Year, new { size = "4", maxlength = "4" })
+                            @Html.ValidationMessageFor(model => model.Year)
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td class="userTitle">
+                            @Html.LabelFor(model => model.Amount)
+                        </td>
+                        <td class="userData">
+                            @Html.EditorFor(model => model.Amount)
+                            @Html.ValidationMessageFor(model => model.Amount)
+                         </td>
+
+                   </tr>
+
+                 </table>
+
+
+                    <div class="buttons">
+                        <input type="submit" value="حفظ" class="save" />
+                        @Html.ActionLink("إلغاء الأمر", "Index", new { ProjectId = Request["ProjectId"], ProjectName = Request["ProjectName"], ProjectNo = Request["ProjectNo"] }, new { @class = "back" })
+                    </div>
+        </div>
+    </div>
+}

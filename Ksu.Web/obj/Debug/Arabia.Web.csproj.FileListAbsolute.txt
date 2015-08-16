@@ -1,0 +1,98 @@
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Web.dll.config
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Web.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Web.pdb
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Core.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Data.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Service.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Practices.Unity.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Newtonsoft.Json.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\PagedList.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\PagedList.Mvc.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Net.Http.Formatting.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Helpers.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Http.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Http.WebHost.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Mvc.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Razor.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.WebPages.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.WebPages.Razor.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\EntityFramework.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\EntityFramework.SqlServer.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Unity.Mvc4.dll
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Core.pdb
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Data.pdb
+D:\Waleed\Arabia Template\Ksu.Web\bin\Arabia.Service.pdb
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Practices.Unity.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\PagedList.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\PagedList.Mvc.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\Newtonsoft.Json.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Net.Http.Formatting.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Helpers.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Http.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Http.WebHost.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Mvc.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.Razor.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.WebPages.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\System.Web.WebPages.Razor.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\EntityFramework.xml
+D:\Waleed\Arabia Template\Ksu.Web\bin\EntityFramework.SqlServer.xml
+D:\Waleed\Arabia Template\Ksu.Web\obj\Debug\Arabia.Web.csprojResolveAssemblyReference.cache
+D:\Waleed\Arabia Template\Ksu.Web\obj\Debug\Arabia.Web.dll
+D:\Waleed\Arabia Template\Ksu.Web\obj\Debug\Arabia.Web.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Web.dll.config
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Web.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Web.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Core.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Data.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Service.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Practices.Unity.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Newtonsoft.Json.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\PagedList.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\PagedList.Mvc.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Net.Http.Formatting.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Helpers.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Http.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Http.WebHost.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Mvc.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Razor.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.WebPages.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.WebPages.Razor.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\EntityFramework.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\EntityFramework.SqlServer.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Unity.Mvc4.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Core.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Data.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Arabia.Service.pdb
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Practices.Unity.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\PagedList.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\PagedList.Mvc.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\Newtonsoft.Json.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Net.Http.Formatting.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Helpers.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Http.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Http.WebHost.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Mvc.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.Razor.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.WebPages.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\System.Web.WebPages.Razor.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\EntityFramework.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\bin\EntityFramework.SqlServer.xml
+D:\Waleed\Arabia Template - Copy\Ksu.Web\obj\Debug\Arabia.Web.csprojResolveAssemblyReference.cache
+D:\Waleed\Arabia Template - Copy\Ksu.Web\obj\Debug\Arabia.Web.dll
+D:\Waleed\Arabia Template - Copy\Ksu.Web\obj\Debug\Arabia.Web.pdb

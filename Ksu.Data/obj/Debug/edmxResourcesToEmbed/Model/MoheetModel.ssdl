@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoheetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CMS_Document">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="int" Nullable="false" />
+    <Property Name="DocumentTitle" Type="varchar" MaxLength="450" />
+    <Property Name="DocumentSubTitle" Type="varchar" MaxLength="450" />
+    <Property Name="DocumentSummary" Type="varchar" MaxLength="4000" />
+    <Property Name="DocumentBody" Type="varchar(max)" />
+    <Property Name="DocumentBodyText" Type="varchar(max)" />
+    <Property Name="DocumentKeywords" Type="varchar" MaxLength="4000" />
+    <Property Name="DocumentDescription" Type="nvarchar" MaxLength="200" />
+    <Property Name="DocumentTypeID" Type="tinyint" />
+    <Property Name="ImageID" Type="int" />
+    <Property Name="ImageComment" Type="varchar" MaxLength="200" />
+    <Property Name="StatusID" Type="tinyint" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="PublishDate" Type="datetime" />
+    <Property Name="SiteID" Type="tinyint" />
+    <Property Name="RatingValue" Type="int" />
+    <Property Name="RatingCount" Type="int" />
+    <Property Name="ViewCount" Type="int" />
+    <Property Name="PrintCount" Type="int" />
+    <Property Name="SaveCount" Type="int" />
+    <Property Name="SendCount" Type="int" />
+    <Property Name="CommentsAllowed" Type="bit" />
+    <Property Name="ShowInTicker" Type="bit" />
+    <Property Name="DocumentGUID" Type="uniqueidentifier" />
+    <Property Name="TempDocumentBody" Type="varchar(max)" />
+    <Property Name="Complete" Type="tinyint" />
+    <Property Name="AuthorName" Type="varchar" MaxLength="200" />
+    <Property Name="AuthorImageID" Type="int" />
+    <Property Name="EditorID" Type="int" />
+    <Property Name="DocumentLocations" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentCountries" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentSubjects" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentNews" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentImages" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentCompetetions" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentTeams" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentPlayers" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentMatches" Type="nvarchar" MaxLength="2000" />
+    <Property Name="DocumentVideos" Type="nvarchar" MaxLength="2000" />
+    <Property Name="SiteIDs" Type="varchar" MaxLength="2000" />
+    <Property Name="isInfographic" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="MoheetModelStoreContainer">
+    <EntitySet Name="CMS_Document" EntityType="Self.CMS_Document" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

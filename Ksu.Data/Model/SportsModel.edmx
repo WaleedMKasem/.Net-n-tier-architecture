@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SportsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Competition">
+          <Key>
+            <PropertyRef Name="Competition_Id" />
+          </Key>
+          <Property Name="Competition_Id" Type="int" Nullable="false" />
+          <Property Name="Competition_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Competition_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Competition_Format" Type="nvarchar" MaxLength="150" />
+          <Property Name="area_id" Type="int" />
+          <Property Name="Competition_Team_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Competition_soccer_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Last_updated" Type="datetime" />
+          <Property Name="DisplayOrder" Type="int" />
+          <Property Name="Competition_Authorized" Type="bit" />
+          <Property Name="Competition_Active" Type="bit" />
+          <Property Name="Competition_InsDate" Type="datetime" />
+          <Property Name="Competition_LastUpdate" Type="datetime" />
+          <Property Name="Competition_Order" Type="int" />
+        </EntityType>
+        <EntityContainer Name="SportsModelStoreContainer">
+          <EntitySet Name="Competition" EntityType="Self.Competition" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SportsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Competition">
+          <Key>
+            <PropertyRef Name="Competition_Id" />
+          </Key>
+          <Property Name="Competition_Id" Type="Int32" Nullable="false" />
+          <Property Name="Competition_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Competition_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Competition_Format" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="area_id" Type="Int32" />
+          <Property Name="Competition_Team_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Competition_soccer_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Last_updated" Type="DateTime" Precision="3" />
+          <Property Name="DisplayOrder" Type="Int32" />
+          <Property Name="Competition_Authorized" Type="Boolean" />
+          <Property Name="Competition_Active" Type="Boolean" />
+          <Property Name="Competition_InsDate" Type="DateTime" Precision="3" />
+          <Property Name="Competition_LastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="Competition_Order" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="SportsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Competitions" EntityType="Self.Competition" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SportsModelStoreContainer" CdmEntityContainer="SportsEntities">
+          <EntitySetMapping Name="Competitions">
+            <EntityTypeMapping TypeName="SportsModel.Competition">
+              <MappingFragment StoreEntitySet="Competition">
+                <ScalarProperty Name="Competition_Id" ColumnName="Competition_Id" />
+                <ScalarProperty Name="Competition_Name" ColumnName="Competition_Name" />
+                <ScalarProperty Name="Competition_Type" ColumnName="Competition_Type" />
+                <ScalarProperty Name="Competition_Format" ColumnName="Competition_Format" />
+                <ScalarProperty Name="area_id" ColumnName="area_id" />
+                <ScalarProperty Name="Competition_Team_Type" ColumnName="Competition_Team_Type" />
+                <ScalarProperty Name="Competition_soccer_Type" ColumnName="Competition_soccer_Type" />
+                <ScalarProperty Name="Last_updated" ColumnName="Last_updated" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="Competition_Authorized" ColumnName="Competition_Authorized" />
+                <ScalarProperty Name="Competition_Active" ColumnName="Competition_Active" />
+                <ScalarProperty Name="Competition_InsDate" ColumnName="Competition_InsDate" />
+                <ScalarProperty Name="Competition_LastUpdate" ColumnName="Competition_LastUpdate" />
+                <ScalarProperty Name="Competition_Order" ColumnName="Competition_Order" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

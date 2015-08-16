@@ -1,0 +1,178 @@
+﻿
+@using PagedList.Mvc;
+@using PagedList;
+@using Arabia.Web.Common;
+@model IPagedList<Arabia.Core.Projects.FullProject>
+
+@{
+    ViewBag.Title = "المشروعات المعتمدة بميزانية الجامعة";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="list-page">
+    <div class="page-title">
+        <h2>المشروعات المعتمدة بميزانية الجامعة</h2>
+    </div>
+
+    <div class="page-new">
+        @Html.ActionLink("إضافة مشروع جديد", "Create")
+    </div>
+
+    <div class="page-search">
+        @using (@Html.BeginForm("Index", "Project", FormMethod.Get))
+        {
+            <table>
+                <tr>
+                    <td>
+                        <b>@Html.DisplayNameFor(model => model.First().ProjectNo)</b>
+                    </td>
+                    <td colspan="3">
+                        @Html.TextBox("projectNo")
+                    </td>
+                    <td>
+                        <b>@Html.DisplayNameFor(model => model.First().Name)</b>
+                    </td>
+                    <td>
+                        @Html.TextBox("projectName")
+                    </td>
+                    
+                </tr>
+                <tr>
+                   
+                    <td>
+                        <b>@Html.DisplayNameFor(model => model.First().ApprovalDate)</b>
+                    </td>
+                    <td colspan="3">
+                        @Html.Label("من")
+                        @Html.UMQDate(model => model.First().fromApprovalDate )
+                        @Html.Label("إلى")
+                        @Html.UMQDate(model => model.First().toApprovalDate)
+                    </td>
+                    <td>
+                        <b>@Html.DisplayNameFor(model => model.First().status)</b>
+                    </td>
+                    <td>
+                        @Html.DropDownList("status", new SelectList(ViewBag.ProjectStatus, "Key", "Value"), "--اختر--")
+                    </td>
+                </tr>
+            </table>
+              
+            <input type="submit" value="بحث" />
+            @Html.ActionLink("إلغاء البحث", "Index", null, new { @class = "clear" })
+        }
+    </div>
+    @if (Model.Count() == 0)
+    {
+        <div class="page-no-result">
+            <span>
+                @Helper.noResultMessage
+            </span>
+        </div>
+    }
+    else
+    {
+        <table class="userList">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ProjectNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ApprovalDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TotalCost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().FirstApprovalYear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().FirstApprovalAmount)
+                </th>
+                <th>
+                    @Html.Label("التفاصيل")
+                </th>
+                <th>
+                   @Html.Label("المصروفات")
+                </th>
+                <th>
+                    @Html.Label("الإعتمادات السنوية")
+                </th>
+                <th>
+                    @Html.Label("أسباب التعثر")
+                </th>
+                <th>
+                    @Html.Label("العقود")
+                </th>
+                <th>
+                    @Html.Label("تعديل")
+                </th>
+                <th>
+                    @Html.Label("حذف")
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                using (Html.BeginForm("Delete", "Project", new { id = item.ProjectId }))
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProjectNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @ViewBag.ProjectStatus[item.status]
+                        </td>
+                        <td>
+                            @Html.UMQLabel(modelItem => item.ApprovalDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalCost)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstApprovalYear)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstApprovalAmount)
+                        </td>
+                        <td>
+                            @Html.ActionLink("التفاصيل", "Details", new { id = item.ProjectId })
+                        </td>
+                        <td>
+                            @Html.ActionLink("المصروفات", "Index", "ProjectTotalSpendings", new { ProjectId = item.ProjectId, ProjectName = item.Name, ProjectNo = item.ProjectNo }, new { })
+                        </td>
+                        <td>
+                            @Html.ActionLink("الإعتمادات السنوية", "Index", "ProjectAnnualApproval", new { ProjectId = item.ProjectId, ProjectName = item.Name, ProjectNo = item.ProjectNo }, new { })
+                        </td>
+                      
+                        <td>
+                            @Html.ActionLink("أسباب التعثر", "Index", "Stumbles", new { id = item.ProjectId, Name = item.Name ,No =item.ProjectNo, IsProject = 1 },new{})
+                        </td>
+                        <td>
+                            @Html.ActionLink("العقود", "Index", "Contract", new { ProjectId = item.ProjectId, ProjectName = item.Name, ProjectNo = item.ProjectNo }, new { })
+                        </td>
+                          <td>
+                            @Html.ActionLink("تعديل", "Edit", new { id = item.ProjectId })
+                        </td>
+                        <td>
+                            <input type="submit" value="حذف" onclick="return confirm('هل تريد فعلا حذف هذا العنصر.');" />
+                        </td>
+                   </tr>
+                }
+            }
+        </table>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, search = Request.QueryString["projectName"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
+
+
+    }
+</div>

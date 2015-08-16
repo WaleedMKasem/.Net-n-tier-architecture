@@ -1,0 +1,163 @@
+﻿@model Arabia.Core.Contracts.FullContract
+@using Arabia.Web.Common;
+@{
+    ViewBag.Title = "التفاصيل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<fieldset>
+    <legend class="title">
+        <b>العقود التابعة للمشروع :</b>
+        <b>رقم المشروع :</b>@Request["ProjectNo"]
+
+        <b>اسم المشروع :</b>@Request["ProjectName"]
+    </legend>
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ContractNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContractNo)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ContractorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContractorName)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ContractorNationality)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContractorNationality)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Amount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Amount)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ExecutionPeriod)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExecutionPeriod)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.SettlementDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.SettlementDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.SigningDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.SigningDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.SiteDeliveryDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.SiteDeliveryDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ActualStartDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.ActualStartDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+         @Html.DisplayNameFor(model => model.ProposedEndDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.ProposedEndDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.Officer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Officer)
+    </div>
+
+   
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.LastContractProgress.EvaluationDate)
+    </div>
+    <div class="display-field">
+        @Html.UMQLabel(model => model.LastContractProgress.EvaluationDate)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.LastContractProgress.ElapsedPeriod)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastContractProgress.ElapsedPeriod)
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.LastContractProgress.ElapsedPeriodPerc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastContractProgress.ElapsedPeriodPerc)%
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.LastContractProgress.ActualProgressPerc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastContractProgress.ActualProgressPerc)%
+    </div>
+
+    <div class="display-label" style="font-weight:bold;">
+        @Html.DisplayNameFor(model => model.LastContractProgress.ProgressRate)
+    </div>
+    <div class="display-field">
+        @if (Model.LastContractProgress.ProgressRate <= 0)
+        {
+            @Html.ImageUrl(@Url.Content("~/Content/images/square_green.png"), 20, 20)
+        }
+        else if (Model.LastContractProgress.ProgressRate < 25)
+        {
+            @Html.ImageUrl(@Url.Content("~/Content/images/square_yellow.png"), 20, 20)
+        }
+        else if (Model.LastContractProgress.ProgressRate >= 25)
+        {
+            @Html.ImageUrl(@Url.Content("~/Content/images/square_red.png"), 20, 20)
+        }
+    </div>
+    <br />
+    <div>
+        @Html.ImageUrl(@Url.Content("~/Content/images/square_green.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[0] <b>  |  </b>
+        @Html.ImageUrl(@Url.Content("~/Content/images/square_yellow.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[1] <b>  |  </b>
+        @Html.ImageUrl(@Url.Content("~/Content/images/square_red.png"), 20, 20)<b> </b>
+        @ViewBag.ProgressRateStatus[2]
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("أسباب التعثر", "Index", "Stumbles", new { id = Model.ContractId, Model = Model.Name, No=Model.ContractNo, IsProject = 0 }, new { }) |
+    @Html.ActionLink("متابعة الإنجاز", "Index", "ContractProgress", new { ContractId = Model.ContractId, ContractName = Model.Name ,ContractNo = Model.ContractNo, ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] }, new { }) |
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.ContractId, ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] }, new { }) |
+    @Html.ActionLink("قائمة عقود المشروع", "Index", new { ProjectId = Request["ProjectId"], ProjectName = @Request["ProjectName"], ProjectNo = Request["ProjectNo"] }, new { @class = "back" })
+</p>

@@ -1,0 +1,31 @@
+@model Ksu.Core.Contracts.Contract
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ContractNo)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ContractNo)
+    @Html.ValidationMessageFor(model => model.ContractNo)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="editor-label">
+    Project
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.ProjectId, ((IEnumerable<Ksu.Core.Projects.Project>)ViewBag.PossibleProjects).Select(option => new SelectListItem {
+        Text = (option == null ? "None" : option.Name), 
+        Value = option.ProjectId.ToString(),
+        Selected = (Model != null) && (option.ProjectId == Model.ProjectId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.ProjectId)
+</div>
